@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab3</title>
+    <style>
+        /*CSS Properties*/
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--HTML-->
+    <form>
+        <table>
+            <!--Pizza Shop 2.0-->
+            <tr>
+                <th colspan="2">Pizza Shop 2.0</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <!--Pizza Topping-->
+            <tr>
+                <td>Pizza Topping</td>
+                <td><input type="radio">Supreme<br>
+                    <input type="radio">Vegetarian<br>
+                    <input type="radio">Hawaiian
+                </td>
+            </tr>
+            <!--Pizza Sauce-->
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                    <select>
+                        <option value="tomato">Tomato</option>
+                        <option value="barbeque">Barbeque</option>
+                        <option value="mayonnaise">Mayonnaise</option>
+                        <option value="secret">Secret Sauce</option>
+                    </select>
+                </td>
+            </tr>
+            <!--Optional Extras-->
+            <tr>
+                <td>Optional Extras</td>
+                <td>
+                    <input type="checkbox" name="extra_cheese" value="1">Extra Cheese</input>
+                    <input type="checkbox" name="gluten_free" value="1">Gluten Free Base</input>
+                </td>
+            </tr>
+            <!--Delivery Instructions-->
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <div style="float: left;">Delivery Instructions:</div>
+                    </div>
+                    <textarea name="delivery" cols="50" rows="4">
+                </textarea></td>
+            </tr>
+            <!--Submmit Button-->
+            <tr>
+                <th colspan="2">
+                    <div>
+                        <div style="float: left;"><input type="submit" style="text-align: left;"></div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
