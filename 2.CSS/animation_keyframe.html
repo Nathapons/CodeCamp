@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@keyframe</title>
+    <style>
+        div, p{
+            width: 100%;
+            animation-name: example;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;
+            animation-direction: alternate;
+        }
+        /*Frome to key frame*/
+        @keyframes example{
+            from{
+                color: yellow;
+                width: 100%;
+                border: 1px solid grey;
+                visibility: hidden;
+            }
+            to{
+                color: green;
+                width: 75%;
+                border: 5px solid red;
+            }
+        }
+        /*Percent keyframe*/
+        /*
+        @keyframes example{
+              0%   {background-color:red; left:0px; top:0px;}
+              25%  {background-color:yellow; left:200px; top:0px;}
+              50%  {background-color:blue; left:200px; top:200px;}
+              75%  {background-color:green; left:0px; top:200px;}
+              100% {background-color:red; left:0px; top:0px;}
+        }
+        */
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is keyframe example</p>
+    </div>
+</body>
+</html>
