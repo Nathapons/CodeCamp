@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booking Template</title>
+    <style>
+        #number{
+            width:50px;
+        }
+        select{
+            width: 145px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!--Row1-->
+        <tr>
+            <td><strong>Flying From</strong></td>
+            <td><strong>To</strong></td>
+        </tr>
+        <!--Row2-->
+        <tr>
+            <td>
+                <select name="flying from">
+                    <option value="">Karachi, Pakist</option>
+                </select> 
+            </td>
+            <td>
+                <select name="To">
+                    <option value="">Islamabad, Pal</option>
+                </select> 
+            </td>
+        </tr>
+        <!--Row3-->
+        <tr>
+            <td><strong>Departing</strong></td>
+            <td><strong>Return</strong></td>
+        </tr>
+        <tr>
+            <td><input type="date"></td>
+            <td><input type="date"></td>
+        </tr>
+        <!--Row4-->
+        <tr>
+            <!--Col1-->
+            <td>
+                <table>
+                    <tr>
+                        <td><strong>Adult</strong></td>
+                        <td><strong>Child</strong></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="number"></td>
+                        <td><input type="number" id="number"></td>
+                    </tr>
+                </table>
+            </td>
+            <!--Col2-->
+            <td>
+                <table>
+                    <tr>
+                        <td><strong>Infant</strong></td>
+                        <td style="color: orangered;"><strong>Currency</strong></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="number"></td>
+                        <td><input type="number" id="number"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" style="color: white; background-color:orangered;"
+</body>
+</html>
