@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework: CSS Review</title>
+    <style>
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th{
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: 18px;
+        }
+        td:nth-child(event){
+            background-color:gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Review Homework</h1>
+    <center>
+        <table>
+            <!--Header-->
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+                <th>Example</th>
+            </tr>
+            <!--Question1-->
+            <tr  style="text-align: left;">
+                <td>CSS syntax ประกอบด้วยอะไรบ้าง</td>
+                <td>
+                    <ol>
+                        <li>Selector คือ องค์ประกอบ HTML ที่คุณต้องการจัดรูปแบบ</li>
+                        <li>Declation คือ บล็อกการประกาศประกอบด้วยการประกาศอย่างน้อยหนึ่งรายการโดยคั่นด้วยอัฒภาค</li>
+                        <ol>
+                            <li>Property คือ ชื่อคุณสมบัติ CSS และค่าคั่นด้วยเครื่องหมายทวิภาค</li>
+                            <li>Value คือ ค่าที่เป็นตัวกำหนดปริมาณของ Property</li>
+                        </ol> 
+                    </ol>
+                </td>
+                <td>h1 {color: #ddd; font-size:20px}<br>
+                    &nbsp;&nbsp;h1 = Selector<br>
+                    &nbsp;&nbsp;{color: #ddd; font-size:20px} = Declation<br>
+                    &nbsp;&nbsp;color, font-size = Properties<br>
+                    &nbsp;&nbsp;#ddd, 20px = value
+                </td>
+            </tr>
+            <!--Question2-->
+            <tr>
+                <td>การเขียน CSS มีกี่แบบอะไรบ้าง</td>
+                <td>
+                    1. Inline: ภายใน HTML tag<br>
+                    2. External: นำเข้าไฟล์ CSS จากภายนอก<br>
+                    3. Internal: เขียนภายใน Element HTML<br>
+                </td>
+                <td>
+                    1. &lt;h1 style=&quot;color:blue;text-align:center;&quot;&gt;This is a heading&lt;/h1&gt;<br>
+                    2. &lt;link rel=&quot;stylesheet&quot; href=&quot;mystyle.css&quot;&gt;<br>
+                    3. body {background-color: lightblue;}
+                </td>
+            </tr>
+            <!--Question3-->
+            <tr>
+                <td>selector มีกี่แบบอะไรบ้าง</td>
+                <td>
+                    1. ID การกำหนดชื่อของ Elemet ได้แค่ 1 element เท่านั้น<br>
+                    2. Class การกำหนดชื่อของ Elemet ได้หลายelement เท่านั้น<br>
+                    3. Pseudo element การกำหนดเฉพาะบางส่วนของ element<br>
+                    4. Pseudo class การกำหนดเฉพาะบางสถานะของ class<br>
+                    5.Combinators การกำหนดเงื่อนระหว่าง 2 selector<br>
+                    6. attribute selector การกำหนดการเลือกชื่อ attribute ใน element<br>
+                </td>
+                <td></td>
+            </tr>
+            <!--Question4-->
+            <tr>
+                <td>combinator มีกี่แบบอะไรบ้าง</td>
+                <td>
+                    1. Descendant Selector: เลือกทั้งหมดขององค์ประกอบ tag<br>
+                    2. Child Selector: ตัวเลือกลูกจะเลือกองค์ประกอบทั้งหมดที่เป็นลูกขององค์ประกอบที่ระบุ<br>
+                    3. Adjacent Sibling: องค์ประกอบพี่น้องต้องมีองค์ประกอบหลักเดียวกันและติดกัน<br>
+                    4. General Sibling Selector: ตัวเลือกพี่น้องทั่วไปจะเลือกองค์ประกอบทั้งหมดที่เป็นพี่น้องขององค์ประกอบที่ระบุ<br>
+                </td>
+                <td>
+                    1. div p{} tag p ทั้งหมดที่อยู่ใน div<br>
+                    2. div>p{} = tag div ที่เป็นลูกของ p<br>
+                    3. div + p{} ที่อยู่ล่าง div และติดกับ div เท่านั้น<br>
+                    4. p ~ ul{} = tag p ที่อยู่ล่าง div ทุก tag
+                </td>
+            </tr>
+            <!--Question5-->
+            <tr>
+                <td>property และ value คืออะไรแตกต่างกันอย่างไร</td>
+                <td>Property จะเป็นตัวกำหนดคุณสมบัติของ tag แต่ value จะเป็นตัวกำหนดปริมาณของ property </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>property ที่สอนใน precamp มีกี่กลุ่มอะไรบ้าง</td>
+                <td>
+                    1. Property for content: color , size , font , text, list-style-type, Height, Width, background<br>
+                    2. Property for border : border, table<br>
+                    3. Property for padding : padding (top right buttom left)<br>
+                    4. Property for margin : margin (top right buttom left)<br>
+                    5. Property for element : display, Height, Width, Position, Float, Align, Flex, Grid<br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>value unit มีกี่ประเภทอะไรบ้างแต่ละ ประเภทคืออะไร</td>
+                <td>
+                    1. Absolute lenghts จะบอกในรูปแบบของหน่วย เช่น px cm<br>
+                    2. relative lenghts จะบอกในรูปแบบเป็นเท่าหรือเปอร์เซนต์<br>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

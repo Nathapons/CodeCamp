@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework2: CSS Review</title>
+    <style>
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th{
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: 22px;
+        }
+        td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        td:nth-child(event){
+            background-color:gainsboro;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Review2</h1>
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+        <!--Question1-->
+        <tr>
+            <td>value ใน display property มีอะไรบ้าง</td>
+            <td>
+                1. Inline อยู่บรรททัดเดียวกัน ไม่สามารถปรับแต่ง ความกว้าง ความสูงได้<br>
+                2. Block คล้าย tag &lt;p&gt; อยู่คนละบรรทัด<br>
+                3. Content ทำให้ element นั้นกลายเป็น content ไม่ได้<br>
+                4. Flex จัดรูปแบบ flex<br>
+                5. Grid การจัดรูปแบบ grid<br>
+                6. Run-in : block or inline ขี้นอยู่กับ เนื้อหา<br>
+                7. Inline-(block, flex, grid, table)<br>
+            </td>
+        </tr>
+        <!--Question2-->
+        <tr>
+            <td>2.grid และ flex แตกต่างกันอย่างไร</td>
+            <td>
+                grid คือ คุณสมบัติในรูปแบบแถวและคอลัมน์<br>
+                flex คือ การกำหนดคุณสมบัต์ให้มีความยืดหยุ่น
+            </td>
+        </tr>
+        <!--Question3-->
+        <tr>
+            <td>3.justify and align แตกต่างกันอย่างไร</td>
+            <td>justify จัดรูปข้อความแบบแนวตั้ง ส่วน align จะจัดการในรูปข้อความแบบแนวนอน</td>
+        </tr>
+        <!--Question4-->
+        <tr>
+            <td>4.position คืออะไร และ มีอะไรบ้าง</td>
+            <td>
+                Position คือ ตำแหน่งของ element
+                <dl>
+                    <dt>ประเภทของ Position</dt>
+                    <dd>
+                        static: เป็นค่าพื้นฐานของทุกบล็อกโดนจะเลื่อนตามหน้าเว็บปกติ<br>
+                        relative: การเลื่อนออกจากตำแหน่งเดิม ตามที่เรากำหนดการดัน block จากทาง ซ้าย ขวา บน ล่าง
+                        <br>
+                        fixed: กำหนดให้ block นั้นยึดอยู่กับที่บนหน้าเว็บ
+                        <br>
+                        absolute:  การเลื่อนออกจากมุมซ้ายบนสุดของหน้าจะ ตามการกำหนดการดัน block จากทาง ซ็าย ขวา บน ล่าง
+                        <br>
+                        sticky: การรวม relative กับ fixed ไว้ด้วยกัน โดยการกำหนด relative เพิ่มว่าจะให้ไป fix ที่ top หรือ bottom ทำให้เราเห็น block นั้นเลื่อนและถูกตรีงไว้เมื่อเรา เลื่อน scroll เมาส์
+                        <br>
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <!--Question5-->
+        <tr>
+            <td>5.z-index คืออะไรใช้อย่างไร</td>
+            <td>z-index จะจัดการ element ในรูปแบบของ layer มันจะคล้ายๆ Bring to back and front ใน Microsoft Office</td>
+        </tr>
+    </table>
+</body>
+</html>
