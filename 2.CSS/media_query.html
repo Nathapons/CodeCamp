@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Query Homework</title>
+    <style>
+        img{width: 20%;}
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            padding: 20px;
+            background-color: blue;
+        }
+        .box{border: 1px solid black; background-color: white;}
+        p{text-align: left; border: 1px solid black; width: 95%;}
+        /*Phone*/
+        @media (min-width: 320px) and (max-width: 480px) {
+            body {background-color: lightblue;}
+            .container{grid-template-columns: auto;}
+        }
+        /*Tablet*/
+        @media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+            body {background-color: red;}
+            .container{grid-template-columns: auto auto;}
+            .box{min-width: 50%;}
+            p{width: 60%;}
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Media Query Homework</h1>
+        <img src="https://www.iconninja.com/files/752/618/436/css-internet-technology-website-web-style-css3-icon.svg">
+        <div class="container_grid">
+            <!--Row 1-->
+        <div class="container">
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div> 
+        </div>
+    </center>
+</body>
+</html>
