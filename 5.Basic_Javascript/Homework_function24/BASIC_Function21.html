@@ -1,0 +1,41 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Function21</title>
+    </head>
+    <body>
+        <script>
+            let NumberInput = prompt("Please Input Number");
+            let Text = "";
+            let Row;
+            let CurrentDash;
+            let CurrentStar;
+            let TotalDash = NumberInput - 1;
+            for (Row=1; Row<=NumberInput; Row++){
+                TotalStar = 2*(Row - 1) + 1
+                // First Dash
+                CurrentDash = 1
+                while (CurrentDash <= TotalDash){
+                    Text += "_"
+                    CurrentDash += 1
+                }
+                // Star
+                CurrentStar = 1
+                while (CurrentStar <= TotalStar){
+                    Text += "*"
+                    CurrentStar += 1
+                }
+                // Second Star
+                CurrentDash = 1
+                while (CurrentDash <= TotalDash){
+                    Text += "_"
+                    CurrentDash += 1
+                }
+                // Prepare for next loop
+                TotalDash -= 1
+                Text += "\n"
+            }
+            console.log(Text)
+        </script>
+    </body>
+</html>

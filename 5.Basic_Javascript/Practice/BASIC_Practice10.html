@@ -1,0 +1,19 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Practice07</title>
+    </head>
+    <body>
+        <h1>1.9.  แบบฝึกหัด</h1><br>
+        &nbsp;&nbsp;4. คำสั่ง alert ไหนที่จะถูกรันบ้าง<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;if (-1 || 0) alert( 'first' );  ==&gt แสดงเพราะ -1 คือ True<br>
+        &nbsp;&nbsp;&nbsp;if (-1 &amp;&amp; 0) alert( 'second' ); ==&gt แสดงเพราะ 0 คือ False<br>
+        &nbsp;&nbsp;&nbsp;if (null || -1 &amp;&amp; 0) alert( 'third' ); ==&gt แสดงเพราะ null คือ False<br>
+        <script>
+            if (-1 || 0) {alert( 'first' )};
+            if (-1 && 0) {alert( 'second' )};
+            if (null || -1 && 0) {alert( 'third' )};
+        </script>
+    </body>
+</html>

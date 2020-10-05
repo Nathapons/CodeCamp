@@ -1,0 +1,11 @@
+/*Internal css*/
+h2{
+    text-align: center;
+    color: blueviolet;
+    font-size: 4rem;
+    background-color: chocolate;
+    padding: 1rem;
+}
+body{
+    background-color: cornsilk;
+}

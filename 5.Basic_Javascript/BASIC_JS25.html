@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Function 1</title>
+</head>
+<body>
+    <script>
+        // function 1. หน้าที่ สามารถเอา code มาใช้บ่อยในหลายที่ได้
+                //  2. ไว้สำหรับเขียนที่เราต้องใช้บ่อย
+                //  3. function ==> alert paramter
+        // sentence
+        // function ชื่อฟังกชัน (พารามิเตอร์) {
+        //     การทำงาน
+        // }
+        // Example1
+        let user = prompt("User name is: ");
+        function show2() {
+            console.log('Hello ' + user);
+            alert('Hello ' + user);
+        }
+        show2();
+        function show3(){
+            for (let i=1; i<4; i++){
+                console.log(i + " Hello, " + user);
+            }
+        }
+        show3();
+        // global variable พยายามใช้ให้น้อยที่สุด
+        function changeUser() {
+            user = "React.js" 
+
+        }
+        changeUser();
+        show3();
+        // Shadows จะทำให้ตัวแปร global ถูกเมิน
+        let UserName = 'John';
+        function show4(){
+            UserName = 'Bob';
+            console.log(UserName);
+        }
+        show4();
+        console.log(UserName)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Type conversion</title>
+</head>
+<body>
+    <script>
+        // การเปลี่ยนแปลงประเภทของข้อมูล(Type Conversion)
+        //  แปลงข้อมูลเป็น string ใช้ String(ตัวแปร)
+        let a = 15
+        let b = 20
+        console.log(`result of a plus with b is ${String(a) + String(b)}.`)
+        console.log(`result of b plus with a is ${String(b) + String(a)}.`)
+        let bool = true;
+        console.log(String(bool))
+        //  แปลงข้อมูลเป็น number ใช้ Number(ตัวแปร)
+        let str = "34"
+        let str2 = "4321"
+        console.log(Number(str)+Number(str2))
+        // ในกรณีลบถ้าข้อมูลเป็น string ที่เป็นตัวเลขจะดำเนินงานทางคณิตศาสตร์ตามปกติ
+        console.log(str*str2)
+        console.log(str/str2)
+        console.log(str-str2)
+        let x;
+        console.log(Number(x))              // NaN
+        console.log(String(x))              // undefined
+        console.log(Number(5>3))            // 1 = True
+        console.log(Number(5<3))            // 0 = False
+        //  แปลงข้อมูลเป็น boolean ใช้ Boolean(ตัวแปร)
+        console.log(Boolean(1)) 
+        console.log(Boolean(0))
+        console.log(Boolean("true"))        // แปลงข้อความนะอยากคิดว่าข้อความที่อยู่ข้างในเป็น Boolean
+        console.log(Boolean("false"))
+    </script>
+</body>
+</html>

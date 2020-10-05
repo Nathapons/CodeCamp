@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Function 2</title>
+</head>
+<body>
+    <script>
+        // Parameter คือค่าที่รับจากภายนอกเข้ามาทำงาน หลักจะส่งตัวแปรไปให้
+        // Example 1
+        function showMessage(from, text){
+            console.log(from + " : " + text)
+        }
+        showMessage('Ann', 'Hello!')
+        showMessage('Ann', "What's up!!!")
+        // Example 2
+        let name = 'Tony'
+        showMessage(name, 'Hi, all')
+        // Example 3
+        let msg = 'Greeting..'
+        showMessage(name, msg)
+        showMessage(msg, msg)
+        // Example 4
+        function showMessage1(from, text){
+            from = "*" + from + "*"
+            console.log(from + " : " + text)
+        }
+        showMessage1('Ann', 'Hello!')
+        showMessage1(name, 'Hello!')
+
+        // Default value ==> กรณีทีไม่มีฟังก์ชั่นใส่ลงไป ถ้า text ไม่มี
+        // Default แบบ ที่1
+        function showMessage2(from='No one', text="No text given"){
+            from = "*" + from + "*"
+            console.log(from + " : " + text)
+        }
+        showMessage2('Dora')
+        showMessage2()
+        // Default แบบที่ 2 เหมือนกับแบบที่ 1 แต่ข้างล่างจะเขียนแบบ ESC6
+        function showMessage3(from, text){
+            from = from || 'No one'
+            text = text || 'No text'
+            from = "*" + from + "*"
+            console.log(from + " : " + text)
+        }
+        showMessage3()
+    </script>
+</body>
+</html>

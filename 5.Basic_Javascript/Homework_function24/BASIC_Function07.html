@@ -1,0 +1,23 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Function07</title>
+    </head>
+    <body>
+        <script>
+            let number = prompt("Please Input Number")
+            let text = ""
+            let current_number = number * number
+            let i
+            let j
+            for (i=1; i<=number; i++){
+                for (j=1; j<=number; j++){
+                    text += String(current_number)
+                    current_number -= 1
+                }
+                text += "\n"
+            }
+            console.log(text)
+        </script>
+    </body>
+</html>

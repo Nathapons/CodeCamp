@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Data type 3</title>
+</head>
+<body>
+    <script>
+        // Boolean ข้อมูลเชิงตรรกศาสตร์มี 2 ค่า คือ True และ False
+        // สามารถใช้แค่ And และ Or
+        let x = 5;
+        console.log(x > 5);
+        console.log(x == 5);        // == จะใช้ = 2 ตัวถ้าใช้ตัวเดียวจะเป็นการกำหนดค่าของตัวแปร
+        console.log(x >= 5);
+        // undefined: ยังไม่ได้กำหนดค่า
+        // null: ค่าว่าง
+        // typeof ==> สามารถใส่วงเล็บข้างหลังหรือไม่ใส่ก็ได้
+        console.log(typeof 15)
+        console.log(typeof(15))
+        console.log(typeof(10n))            // bigint พึ่งจะไม่สามารถใช้ Safari กับ IE ได้ สามารถเก็บตัวเลขได้ 16 หลัก
+        console.log(typeof false)           // Boolean
+        console.log(typeof "false")         // ถ้ามี "" คร่อมคือ string นะ
+        console.log(typeof null)
+        console.log(typeof console.log)     // เป็น function เพราะจะมีวงเล็บในการกำหนดพารามิเตอร์
+        console.log(typeof alert)           // เป็น function เพราะจะมีวงเล็บในการกำหนดพารามิเตอร์
+        
+    </script>
+</body>
+</html>

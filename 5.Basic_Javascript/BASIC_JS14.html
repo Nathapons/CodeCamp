@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Logical NOT</title>
+</head>
+<body>
+    <input type="text" id="in1" placeholder="any text">
+    <button onclick="ToggleTextBox">Toggle text</button>
+    <script>
+        // !true = false, !false = true
+        console.log(!true)
+        console.log(!1>2)
+        // !!null = false (!!null = Boolean(null))
+        console.log(!!null)
+        console.log(!!"")
+        console.log(!!NaN)
+        // ประยุกต์ใช้
+        function ToggleTextBox{
+            // let state = document.querySelector("#in1").disabled 
+            // document.querySelector("#in1").disabled = !state
+            document.querySelector("#in1").disabled = !(document.querySelector("#in1").disabled)
+        }
+    </script>
+</body>
+</html>

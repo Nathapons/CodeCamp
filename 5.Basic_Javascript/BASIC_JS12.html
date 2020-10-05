@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Logical OR</title>
+</head>
+<body>
+    <script>
+        // Or มันจะเช็ค condition ทั้งหมดถ้าเป็นจริงก็จะไม่เช็คตัวอื่นต่อ(หากมี condition มากกว่า 1 ตัวขึ้้นไป)
+        let x = 2 > 5 || 5 >2 || null
+        console.log(x)
+        let y = 2 > 5 || 5 < 3 || console.log('End')
+        console.log(y)
+        // Boolean ของ string เป็น true เสมอ
+        let z = 1 == 2 || "Haha" || 6 > 3
+        console.log(z)
+        // ยกเว้นว่า String คือ ค่าว่างเปล่า
+        console.log(Boolean(""))
+        // Remark 1 = true ||  0 = false
+        console.log(Boolean(null || 0 || ""))
+        // 0, undefined, null = false
+        let f
+        console.log(Boolean(f))
+        // ประยุกต์ใช้กับ if condition
+        if (1===2 || "" || 6>3){
+            console.log('Condition is true')
+        }
+        // ใช้ในกรณีที่ user กรอกข้อมูลออกมา
+        let currentUser = prompt("Current User")
+        let defaultUser = prompt("Default User")
+        console.log(currentUser || defaultUser || "unknown")
+    </script>
+</body>
+</html>

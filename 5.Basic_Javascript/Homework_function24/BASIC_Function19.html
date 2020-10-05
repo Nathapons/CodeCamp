@@ -1,0 +1,33 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Function19</title>
+    </head>
+    <body>
+        <script>
+            let number = prompt("Please Input Number")
+            let position_dash =number-1
+            let text = ""
+            let row
+            let final_row = (2*number)-1
+            let column
+            for (row=1; row <= final_row; row++){
+                for (column=1; column<=number; column++){
+                    if (column <= position_dash){
+                        text += "_"
+                    }else{
+                        text += "*"
+                    }
+                }
+                text += "\n"
+                if (row < number){
+                    position_dash -= 1
+                }else{
+                    position_dash += 1
+                }
+                
+            }
+            console.log(text)
+        </script>
+    </body>
+</html>

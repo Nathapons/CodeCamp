@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Data type 2</title>
+</head>
+<body>
+    <script>
+        // 1. Datatype: Number ==>  เป็นทั้งจำนวนเต็มและทศนิยม
+        // Special numeric values ค่าพิเศษที่นอกเหนือจาก Interger และ float
+        // - NaN = Not a Number
+        // - Infinity (- value to + value)
+        // สามารถ + - * / ได้
+        let x = 1/0
+        console.log(x)
+        console.log(typeof(Infinity))           // ถ้าปริ้น Infinity เพื่อหาชนิดของข้อมูลจะเป็น number
+        console.log("A number" * 2)             // NaN
+        // 2. String ข้อมูลประเภทข้อความใช้ สามารถใช่แค่เครื่อง + เท่านั้ในการดำเนินการ ข้อความ
+        // Original ==> Double Quote("") และ Single Quote ได้ ('')
+        // Backticks ==> เหมือน String format ใน python : let msg4 = `Sonter at ${msg1} #5 $ {msg2}`
+        let Width = 20
+        let Length = 30
+        let Area = Width + Length
+        // วิธีการรวม string ให้กลายเป็นประโยคทำได้ 2 วิธี
+        //  1. ใช้วิธีการดำเนินทางคิณตศาสตร์
+        console.log("This rectangle width is " + Width + ". length is " + Length + ". Area is " + Area)
+        // จะไม่สามารถนำค่าตัวแปรไปใส่ในประโยคได้
+        console.log("This rectangle width is ${Width}. Length is ${Length}. Area is ${Area}")
+        //  2. Backticks
+        console.log(`This rectangle width is ${Width}. Length is ${Length}. Area is ${Area}`)
+        
+    </script>
+</body>
+</html>

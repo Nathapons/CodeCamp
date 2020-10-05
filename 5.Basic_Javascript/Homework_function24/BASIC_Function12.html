@@ -1,0 +1,27 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Function12</title>
+    </head>
+    <body>
+        <script>
+            let number = prompt("Please Input Number")
+            let position_dash = number
+            let text = ""
+            let i
+            let j
+            for (i=1; i<=number; i++){
+                for (j=1; j<=number; j++){
+                    if (j == position_dash) {
+                        text += "_"
+                        position_dash -= 1
+                    }else{
+                        text += "*"
+                    }
+                }
+                text += "\n"
+            }
+            console.log(text)
+        </script>
+    </body>
+</html>

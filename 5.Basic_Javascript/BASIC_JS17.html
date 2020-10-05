@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Loop while 3</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        let passcode = "";
+        let i = 0;
+        while (passcode !== "CodeCamp"){
+            passcode = prompt('Enter passcode');
+            i++;
+            console.log(`Number of tries = ${i}`)
+        }
+        document.querySelector("#p1").innerText = "OK, You can access our content"
+    </script>
+</body>
+</html>

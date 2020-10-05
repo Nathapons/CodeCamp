@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Practice</title>
+</head>
+<body>
+    <h1>แบบฝึกหัด</h1>
+    <h2>แปลง function ข้างล่างให้อยู่ในรูป arrow function</h2>
+    function ask(question, yes, no) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (confirm(question)) yes()<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;else no();<br>
+    }<br>
+    ask("Do you agree?",function() { alert("You agreed."); },function() { alert("You canceled the execution."); });
+    <h2>Answer</h2>
+    <p>
+    &nbsp;&nbsp;let ask = (question, yes, no) => confirm(question)? yes(): no()<br>
+    &nbsp;&nbsp;ask("Do you agree?",function() { alert("You agreed."); },function() { alert("You canceled the execution."); });
+    </p>     
+    <script>
+        let ask = (question, yes, no) => confirm(question)? yes(): no()
+        ask("Do you agree?",function() { alert("You agreed."); },function() { alert("You canceled the execution."); }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Function 4</title>
+</head>
+<body>
+    <script>
+        // การคืนค่าฟังก์ชั่นประยุกต์
+        // confirm ==> OK, Cancel
+        function checkAge(age){return (age >= 18)? 'true': confirm('Do you have permission from your parents?')}
+        let answer = (checkAge(prompt('How old are you?', 18)))? console.log('Access granted'): console.log('Access denined')
+        // return; ==> จะไม่มีค่าที่ได้จากฟังก์ชั่น
+        function f1() {
+            return;
+        }
+        console.log(typeof f1)
+        function f2() {}
+        console.log(typeof f2)
+        function f3() {return null;}
+        console.log(typeof f3)
+    </script>
+</body>
+</html>

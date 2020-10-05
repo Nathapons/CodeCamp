@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Loop for 5 break</title>
+</head>
+<body>
+    <script>
+        // break การหยุดวงวน เมื่อเจอ break จะทำการหยุดวนลูบทันที
+        // example1
+        for (let i=1; i<=9; i++){
+            console.log(i)
+            if (i == 5){
+                break
+            }
+        }
+        // Example break
+        let sum = 0;
+        while (true){
+            let value = +prompt('Enter number', '');
+            // value = 0 มันก็ break นะ!!!
+            if (!value) { break };
+            sum += value;   // sum = sum + v
+        }
+        console.log(`sum: ${sum}`)
+    </script>
+</body>
+</html>

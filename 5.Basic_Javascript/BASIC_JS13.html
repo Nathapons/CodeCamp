@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Logical AND</title>
+</head>
+<body>
+    <script>
+        // AND ทุกเงื่อนไขเป็นเท็จหมด มันจะเช็คจากซ้ายไปขวา ถ้าเจอเท็จมันจะคืนค่าทันทีไม่ตรวจสอบเงื่อนไขถัดไป (ในกรณีที่มีหลายเงื่อนไข)
+        // Example1
+        if (5>3 && 6>4){
+            console.log("OK")
+        }else{
+            console.log("Not OK")
+        }
+        // Example2
+        if (5>3 && 6>4 && 4<1){
+            console.log("OK")
+        }else{
+            console.log("Not OK")
+        }
+        // Remark undefined null 0 alert console.log ให้ค่า false
+        let y = Boolean(console.log("A"))
+        console.log(y)
+        // ประยุกต์ใช้
+        let z = (prompt("Input value") > 0)? console.log("มากกว่า 0"): console.log("น้อยกว่า 0")
+    </script>
+</body>
+</html>

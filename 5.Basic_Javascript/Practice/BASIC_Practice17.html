@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Practice - 01</title>
+</head>
+<body>
+    <h1>แบบฝึดหัด</h1>
+    <h2>1. แปลง Code ดังกล่าวเป็น if-else statement</h2>
+    switch (browser) {<br>
+        case 'Edge':<br>
+          alert( "You've got the Edge!" );<br>
+          break;<br>
+      <br>
+        case 'Chrome':<br>
+        case 'Firefox':<br>
+        case 'Safari':<br>
+        case 'Opera':<br>
+          alert( 'Okay we support these browsers too' );<br>
+          break;<br>
+      <br>
+        default:<br>
+          alert( 'We hope that this page looks ok!' );<br>
+      }
+      <h3>Answer</h3>
+      let browser = prompt('Please Enter Browser', 'Edge');<br>
+
+        if (browser === 'Edge') {<br>
+        &nbsp;&nbsp;&nbsp;alert( "You've got the Edge!" )<br>
+        } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {<br>
+        &nbsp;&nbsp;&nbsp;alert( 'Okay we support these browsers too' )<br>
+        } else {<br>
+        &nbsp;&nbsp;&nbsp;alert( 'We hope that this page looks ok!' )<br>
+        } 
+    <script>
+        let browser = prompt('Please Enter Browser', 'Edge');
+
+        if (browser === 'Edge') {
+            alert( "You've got the Edge!" )
+        } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+            alert( 'Okay we support these browsers too' )
+        } else {
+            alert( 'We hope that this page looks ok!' )
+        } 
+    </script>
+</body>
+</html>

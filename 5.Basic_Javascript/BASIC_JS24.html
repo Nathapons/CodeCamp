@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Basic JavaScript – Switch case</title>
+</head>
+<body>
+    <script>
+        // Switch case ใช้เมื่อต้องการ match ค่าตัวแปรกับภาษาที่ทำ
+        // let a = Number(prompt("2+2 = ?")) = let a = +prompt("2+2 = ?")
+        let a = +prompt("2+2 = ?")
+        switch (a) {
+            case 3:
+                alert('Too small');
+                // ปิดด้วย break เสมอ
+                break
+            case 4:
+                alert('Yesss....');
+                break
+            case 5 :
+                alert('Too big');
+                break
+            case 6:
+                // กรณีถ้าไม่ใส่ break ตอนถ้าจะรันคำสั่งลงมาข้างทันที
+                alert('Too big');
+            // default จะคล้าย กับ case else ใน vba
+            default :
+                alert('What......')
+        }
+    </script>
+</body>
+</html>

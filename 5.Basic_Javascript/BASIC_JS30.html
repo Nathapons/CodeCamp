@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Call back function
+        function ask(question, yes, no) {
+            // showOk ==> yes, showCancel = no
+            if (confirm(question)) yes()
+            else no();
+        }
+        function showOk() {
+            alert( "You agreed." );
+        }
+        function showCancel() {
+            alert( "You canceled the execution." );
+        }
+        function showOk2(){
+            console.log('Agree....from OK2')
+        }
+        // usage: functions showOk, showCancel are passed as arguments to ask
+        // ask("Do you agree?", showOk, showCancel);
+        // ask("Agree??", showCancel, showOk)
+        ask("Do you agree?", showOk2, showCancel)
+    </script>
+</body>
+</html>

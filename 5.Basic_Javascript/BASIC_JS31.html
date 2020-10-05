@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Function 7 arrow function</title>
+</head>
+<body>
+    <script>
+        // Arrow funtion ==> Function Expression เหมือนกัน
+        // Function Expression
+        let sum = function(a, b) {
+            return a + b;
+        };
+        console.log(sum(2, 2))
+        // Arrow Function มันจะละ function, return เลยได้เลยก็ต่อเมื่อมันเป็นตัวแปรตัวเดียวและต้องการรีเทิร์น
+        let sum2 = (a, b) => a + b
+        console.log(sum2(3, 4))
+        // Arrow function + Tenary condition
+        let checkAge = (age) => (age>=18)? "Pass":"Not Pass"
+        console.log(checkAge(19))
+        // Arrow function + Tenary condition
+        // ถ้ามีพารามิเตอร์ตัวเดียวเอาวงเล็บออกได้เลย
+        let evenOdd = num => (num%2 === 0)? "Even":"Odd"
+        console.log(evenOdd(20))
+        let double = n => n*2
+        console.log(double(20))
+        // กรณีที่ไม่มี argument
+        let sayHi = () => console.log('Hello');
+        sayHi()
+        // กรณีที่ มีการทำงานข้างในการทำงาน arrow function
+        let sayHi1 = () => {
+            let x = 'Happy'
+            let y = 'Arrow function'
+            return y
+        }
+        console.log(sayHi1())
+    </script>
+</body>
+</html>

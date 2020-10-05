@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Loop for 1</title>
+</head>
+<body>
+    <script>
+        // for loop มีการเริ่มต้นและจบที่แน่นอน
+        // for (ค่าเริ่มต้น; เงื่อนไข; ค่าต่อไป){
+        //     คำสั่ง
+        // }
+        for (let i=2; i < 6; i++){
+            console.log(`พิมครั้งที่ ${i}`);
+        }
+        console.log('Out of loop1')
+        // Remark ระวังการใส่เงื่อนไขและค่าต่อไปให้สอดคล้องด้วยไม่นั้นจะเป็น loop infinity
+        for (let i=2; i < 11; i+=2){
+            console.log(`พิมครั้งที่ ${i}`);
+        }
+        console.log('Out of loop2')
+    </script>
+</body>
+</html>

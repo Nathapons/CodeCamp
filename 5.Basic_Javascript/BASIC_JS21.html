@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript – Loop for inner HTML</title>
+    <style>
+        #p1{
+            font-size: 2 rem;
+            margin: 1 rem;
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        let m = prompt('จะดูสูตรคูณแม่อะไร', '2')
+        // // innerText คือจะมองตัวแปรที่ส่งค่าเป็น text หมดเลย
+        // for(let m=2; m<13; m++){
+        //     document.querySelector("#p1").innerHTML += (`---สูตรคูณแม่ ${m}---`) + "<br>"
+        //     for (let n=1; n<13; n++){
+        //         let text = (`${m} x ${n} = ${m*n}`)
+        //         document.querySelector("#p1").innerHTML += text + "<br>"
+        //     } // for n
+        // } // for m
+
+        // Homework: รับค่าตัวเลขมาจากผู้ใช้และทำการคูณแม่มา
+        document.querySelector("#p1").innerHTML += (`สูตรคูณแม่ ${m} <br>`)
+        for (let n=1; n<13; n++){
+            document.querySelector("#p1").innerHTML += (`${m} x ${n} = ${m*n} <br>`)
+        }
+    </script>
+</body>
+</html>

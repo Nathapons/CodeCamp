@@ -1,0 +1,49 @@
+<!Doctype>
+<html>
+    <head>
+        <title>Function24</title>
+    </head>
+    <body>
+        <script>
+            let NumberInput = prompt("Please Input Number");
+            let Text = "";
+            let Row;
+            let FinalRow = 2*NumberInput - 1
+            let CurrentDash;
+            let CurrentNumber=1;
+            let NumberVolume;
+            let TotalNumber = 1;
+            let Totaldash = Number(NumberInput) - 1
+            for (Row=1; Row<=FinalRow; Row++){
+                // First Dash
+                CurrentDash = 1
+                while (CurrentDash<=Totaldash) {
+                    Text += "_"
+                    CurrentDash += 1
+                }
+                // Number
+                NumberVolume = 1
+                while (NumberVolume<=TotalNumber) {
+                    Text += String(CurrentNumber)
+                    CurrentNumber += 1
+                    NumberVolume += 1
+                }
+                // Second Dash
+                CurrentDash = 1
+                while (CurrentDash<=Totaldash) {
+                    Text += "_"
+                    CurrentDash += 1
+                }
+                Text += "\n"
+                if (Row < NumberInput){
+                    TotalNumber += 2
+                    Totaldash -= 1
+                }else{
+                    TotalNumber -= 2
+                    Totaldash += 1
+                }
+            }
+            console.log(Text)
+        </script>
+    </body>
+</html>
