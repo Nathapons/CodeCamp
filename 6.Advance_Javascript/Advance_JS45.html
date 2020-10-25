@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Object entries 2</title>
+</head>
+<body>
+    <script>
+        // Use case
+        let price = {
+            A : 100, 
+            B : 200,
+            C : 300
+        }
+
+        // โจทย์คือ ราคาลด 10% ใช้ Object
+        let discount = Object.values(price).map( p => p * 0.9)
+        console.log(discount)
+
+        // แบบพักตัวแปรกันสับสน
+        let op = Object.entries(price);
+        let opDiscount = op.map( ([k, v]) => [k, v * 0.9])
+        let oprs = Object.fromEntries(opDiscount);
+        console.log(oprs);
+
+        // แบบย่อ
+        console.log(Object.fromEntries( Object.entries(price).map( ([k, v]) => [k, v*0.9] ) ));
+    </script>
+</body>
+</html>

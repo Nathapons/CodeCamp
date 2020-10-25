@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Map 4 Entries</title>
+</head>
+<body>
+    <script>
+        // Object.entries(<ชื่อ Object>) จะแปลงจาก Object => Map ได้
+        let user = {
+            name : 'John',
+            age : 24,
+            gender : 'male',
+            from : 'bkk'
+        }
+
+        let om = Object.entries(user);
+        console.log(om);
+
+        // การดึงค่าใน Map จะคล้ายกับ excel [row][column]
+        console.log(om[0][1]);
+        console.log(om[3][1]);
+
+        let mm = new Map(om);
+
+        // แปลง Map ==> Object
+        let user_ex = Object.fromEntries(mm);
+        console.log(user_ex);
+
+        // สามารถยัด Map ลงใน from Entries ได้
+        let prod = Object.fromEntries( [
+            ['pname', 'Apple'],
+            ['price', 400]
+        ] )
+        console.log(prod);
+    </script>
+</body>
+</html>

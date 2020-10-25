@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Map 2 method</title>
+</head>
+<body>
+    <script>
+        let m = new Map();
+
+        // Set
+        m.set('name', 'John');
+        m.set('age', 25).set('gender', 'male').set('from', 'bkk');
+        m.set(true, 'single');
+        m.set(false, 'married');
+        console.log(m);
+
+        // Get
+        console.log(m.get('Age'));
+        console.log(m.get(true));
+
+        // Has
+        console.log(m.has('gender'));
+        console.log(m.has('genderR'));
+
+        // delete
+        m.delete('age');
+        console.log(m);
+
+        // clear
+        m.clear();
+        console.log(m);
+
+        // size
+        console.log(m.size);
+    </script>
+</body>
+</html>

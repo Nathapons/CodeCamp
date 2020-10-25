@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 2 forEach</title>
+</head>
+<body>
+    <script>
+        // Concat
+        let body = ['Head', 'Shoulder'];
+        let body2 = ['Knee', 'Toe'];
+
+        allBody = body.concat(body2);
+
+        // For Each
+        allBody.forEach(function (x, i) {
+            console.log(`Index ${i}; String ${x}`)
+        })
+
+        // For Each with Arrow function
+        allBody.forEach(x => console.log(x))
+
+        for (let x of allBody) {
+            console.log(x);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Object Part 3</title>
+</head>
+<body>
+    <script>
+        // Cloning and Merging
+        let user = {
+            name: "Nathapon",
+            age: 25,
+            skill: "Python"
+        };
+        console.log(user)
+        let admin = {};
+        // 1. For in แล้ว Copy ที่ละอัน
+        for (let key in user) {
+            admin[key] = user[key]
+        }
+        user.name = 'CodeCamp'
+        console.log(user === admin) // คนละอันไม่เกี่ยวกัน
+        console.log(user)
+        console.log(admin)
+        // 2. Object.assign ==> ช่วยในการ Copy ข้อมูล
+        let obj1 = {
+            name: 'Nathapon',
+            age: 25,
+            skill: 'Python'
+        };
+        let obj2 = Object.assign({}, obj1)
+        console.log(obj2)
+        let object1 = {
+            name: 'Ax'
+        }
+        let object2 = {
+            name: 'Codecamp',
+            age: 19
+        }
+        let object3 = {
+            name: 'Jaing',
+            skill: 'JS'
+        }
+        // ถ้าซ้ำจะเอาตัวหลังสุดมาแทนก่อน name 'Jaing' จะมาทับบ Codecamp และ Ax
+        let object4 = Object.assign(object1, object2, object3)
+        console.log(object4)
+    </script>
+</body>
+</html>

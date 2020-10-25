@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Practice22</title>
+</head>
+<body>
+    <script>
+        let style = ['Jazz', 'Blues'];
+
+        console.log("เพิ่ม Rock-n-Roll ต่อท้าย style.push('Rock-n-Roll')");
+        style.push('Rock-n-Roll');
+        console.log(style);
+        
+        console.log("เพิ่ม Classics ตรงกลาง");
+        style.splice( Math.ceil(style.length / 2), 0, 'Classics');
+        console.log(style);
+
+        console.log("เพิ่ม Item ตัวแรกออกจาก Array เพิ่มคำว่า Rap, Reggae");
+        style.splice(0, 1, "Rape", "Reggae");
+        console.log(style);
+    </script>
+</body>
+</html>

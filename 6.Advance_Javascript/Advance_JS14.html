@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 1</title>
+</head>
+<body>
+    <script>
+        // 1. String สามาถใช้ '', "" และ `` ได้
+        let single = 'Single-quoted';
+        let double = "Double-quoted";
+        let backticks = `backticks`;
+
+        // 2. String Template
+        function sum(a, b){
+            return a + b;
+        }
+        // backticks จะอนุญาติให้เราใข้ ${...} เพื่อใส่ค่า expression
+        // ${Expression} คือ สิ่งที่มีการคืนค่าเสมอ
+        console.log(`1+2 = ${sum(1,2)}`);
+
+        // 3. ตัวอักษรพิเศษ
+        let guest = 'Guest:\n * John\n * Pete\n * Mary'
+        console.log(guest);
+        console.log("couldn\'t be");
+        console.log('I \"think\" I \"am\"');
+        console.log("one\\two\\three");
+        console.log("I am\n I am said");
+        console.log("to be\ror not");
+        console.log("one\ttwo\tthree")
+        console.log("correctoin\b\b\bion");
+        console.log("Title A\fTitle B");
+    </script>
+</body>
+</html>

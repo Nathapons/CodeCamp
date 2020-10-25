@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 9 reverse</title>
+</head>
+<body>
+    <script>
+        // reverse ทำงานเหมือน sort แต่กลับด้านกัน
+        let fruits = ['apple', 'Orange', 'grape', 'plum'];
+        console.log( fruits.reverse() );
+
+        function compareUppercase(a, b){
+            let A = a.toUpperCase()
+            let B = b.toUpperCase()
+            return ( A > B )? 1 : ( A < B)? -1 : 0
+        }
+
+        console.log( fruits.reverse(compareUppercase) );
+
+        let thw = ['เด็ก', 'อก', 'เสมา', 'สนาม', 'สะดม'];
+        console.log( thw.sort( (a, b) => a.localeCompare(b) ).reverse() );
+    </script>
+</body>
+</html>

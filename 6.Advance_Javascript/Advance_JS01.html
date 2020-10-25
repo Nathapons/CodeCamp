@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Object Part 1</title>
+</head>
+<body>
+    <script>
+        /* Object จะประกอบด้วย properties
+        ซึ่ง properties แต่ละอันจะประกอบด้วย key และ value
+        let user = {name: "John", age: 30};
+        name: "John" และ age: 30 ==> properties
+        name และ age ==> key, "John" และ age ==> value */
+        let user = {name: "John", age: 30};
+        // วิธีการได้ value
+        console.log(user.age)
+        console.log(user.name)
+        // เพิ่ม Properties กับ user
+        user.high = 175
+        user.isSingle = true
+        console.log(user)
+        // ลบสมาชิกใน object
+        console.log('delete user.high')
+        delete user.high
+        console.log(user)
+        console.log('user["isSingle"]')
+        // remark ถ้าใส่ปีกกาจะต้องใส่ [] และ key ข้างในจะใส่ "key"
+        user["isSingle"]
+        console.log(user)
+        /*
+        การสร้าง Object
+        การสร้าง Object มีทั้งหมด 2 วิธี
+            1. แบบ Object constructor   ==> let user = new Object(); 
+            2. แบบ Object Iteral        ==> let user = {};
+        */
+
+        // Computed Properties
+        let propertiesName = "age";
+
+        // จะได้ key เป็น age ==> [ตัวแปร] จะนำค่าที่เราประกาศมาใส่แทน
+        let obj = {[propertiesName]: 20 }
+
+        console.log(obj);
+
+
+    </script>
+</body>
+</html>

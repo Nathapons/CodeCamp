@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 6.2 indexOf loop</title>
+</head>
+<body>
+    <script>
+        let str = 'Widget with id';
+        let stringSearch = prompt(`Text to search in ${str}`)
+        let i = 0;
+
+        while (true) {
+            i = str.indexOf(stringSearch, i);
+            if (i < 0) {
+                break
+            } else {
+                console.log(`คำที่คุณหา คือ ${stringSearch} อยู่ตำแหน่งที่ ${i} ใน ${str}`);
+                i++
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 7 slice</title>
+</head>
+<body>
+    <script>
+        // slice คือต้องการข้อความบางคำออกมาใช้กับตัวเลขติดลบได้ แนะนำให้ใช้
+        let str = 'กรุงเทพมหานคร';
+
+        console.log(str.slice(2));
+        console.log(str.slice(0, 4));       // เอา str ตั้งแต่ 0 - 4 ไม่เอาตำแหน่งที่ 4
+        console.log(str.slice(-3));
+        console.log(str.slice(-6, -3));
+        console.log(str.slice(1, 3));       // เริ่มต้นตำแหน่งที่ 1 - 3 ไม่เอาตำแหน่งที่ 3 
+
+        // substr คือต้องการข้อความบางคำออกมาใช้กับตัวเลขติดลบไม่ได้
+        console.log(str.substr(-6, -3));
+    </script>
+</body>
+</html>

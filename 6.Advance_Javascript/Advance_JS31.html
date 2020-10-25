@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 5 map</title>
+</head>
+<body>
+    <script>
+        // ForEach สำหรับการแปลงร่าง Array
+        let fruits = ['Apple', 'Orange', 'Plum'];
+        let m = [];
+
+        fruits.forEach( (item, index) => m[index] = item.length);
+        console.log(m);
+
+        // map ในการแปลงร่าง Array
+        m = fruits.map( item => (item.length * 2) );
+        console.log(m);
+
+        // Sort ==> Return Sort array
+        fruits.push('Papaya');
+        console.log(fruits.sort())    // ไม่มี Algorithm ในการ sort
+        
+    </script>
+</body>
+</html>

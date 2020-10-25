@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript - Practice04</title>
+</head>
+<body>
+    <script>
+        console.log(FillFruits())
+
+        function FillFruits() {
+            let obj = {};
+            let key = prompt('Enter fruit name: ')
+            while (key !== 'stop') {
+                let value = Number(prompt('Number of ' + key))
+                if (value > 1) {
+                    key += "s"
+                }
+                obj[key] = value
+                // Loop command
+                key = prompt('Enter fruit name: ')
+            }
+            return obj
+        }
+    </script>
+</body>
+</html>

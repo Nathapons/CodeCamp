@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 6.1 indexOf</title>
+</head>
+<body>
+    <script>
+        let str = 'Widget with id';
+
+        // indexof ==> จะค้นหาข้อมูลจากซ้ายไปขวาโดยจะเริ่มที่ index = 0
+        console.log(str.indexOf('Widget'));
+        // กรณีไม่เจอจะ Return เป็น -1
+        console.log(str.indexOf('widget'));
+        console.log(str.indexOf('id'));
+
+        // กำหนดตำแหน่งเริ่มต้นในการค้นหาที่ index = 2
+        console.log(str.indexOf('id', 2));
+    </script>
+</body>
+</html>

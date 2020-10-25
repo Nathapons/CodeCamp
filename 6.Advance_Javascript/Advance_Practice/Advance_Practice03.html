@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>Advanced JavaScript - Practice03</title>
+</head>
+<body>
+    <script>
+        console.log(FillObject())
+
+        function FillObject() {
+            let obj = {};
+            let key = prompt('Fill key: ')
+            while (key !== 'stop') {
+                let value = prompt('Fill Value: ')
+                obj[key] = value
+                // Loop command
+                key = prompt('Fill key: ')
+            }
+            return obj
+        }
+    </script>
+</body>
+</html>

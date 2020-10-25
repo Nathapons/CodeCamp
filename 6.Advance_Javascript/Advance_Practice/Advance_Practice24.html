@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maximal contiguous Subarray</h1>
+
+    <script>
+        console.log(getMaxSubSum([-1, 2, 3, -9]));
+        console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+        console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+        console.log(getMaxSubSum([-2, -1, 1, 2]));
+        console.log(getMaxSubSum([100, -9, 2, -3, 5]));
+        console.log(getMaxSubSum([1, 2, 3]));
+
+        function getMaxSubSum(arr) {
+            let sum_arr_list = []
+
+            for (let arrPosition = 0; arrPosition < arr.length; arrPosition++){
+                
+                for (let totalString = 1; totalString <= arr.length; totalString++){
+                    let arrSlice = arr.slice(arrPosition, totalString);
+
+                    if (arrSlice.length >= 1){
+                        let sum = 0;
+                        for (let i = 0; i < arrSlice.length; i++) {
+                            sum += arrSlice[i];
+                            sum_arr_list.push(sum);
+                        }
+                    }
+                }
+
+            }
+            return Math.max(...sum_arr_list)
+        }
+    </script>
+</body>
+</html>

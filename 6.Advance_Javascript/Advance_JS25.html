@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array 1 intro</title>
+</head>
+<body>
+    <script>
+        // Array คือ การเก็บข้อมูลเป็น Series แบบมีลำดับ
+        // Datatype of Array = Object
+        // ข้อดี คือไม่ต้องตั้งขนาดสูงสุดของ Array
+        let dayName = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        
+        console.log(dayName[0]);
+        console.log(dayName[6]);
+
+        dayName[7] = 'Holiday';
+        console.log(dayName);
+
+        // dayName[8] => จะไม่มีค่า คือ Undefined
+        dayName[9] = 'Good day';
+        console.log(dayName);
+
+        // Array สามารถใส่ function แล้วไม่จำเป็นว่าประเภทข้อมูลต้องเหมือนกัน
+        dayName[10] = 2020;
+        console.log(dayName);
+
+        // Example 1: พื้นฐาน
+        let dayName2 = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+        console.log(dayName2);
+        console.log(dayName2[4]);
+        console.log(dayName2.length);
+
+        // Example 2: การประยุกต์
+        let n = 2;
+        let fruits = ['Apple', 'Orange', 'Plum'];
+        // สามารถใส่เลข Index ที่เป็นค่าลบได้
+        console.log(fruits[n]);
+        console.log(fruits[-2]);
+        // การเพิ่มข้อมูล
+        fruits[3] = "Mango";
+        console.log(fruits);
+        // หาความยาวของ Array
+        console.log(fruits.length);
+
+        // ประยุกต์กับลูบ for ในการทำงาน
+        for (let i = 0; i <= fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        let arr = [
+            function () { alert("Hello")}, 
+            function () { alert("สวัสดี")}, 
+            function () { alert("Hola")}
+        ]
+
+        /* Run function in Array
+        for (let i = 0; i <= arr.length; i++) {
+             console.log(arr[i]());
+        } */
+        
+        let products = [
+            { Pname : 'Apple', Price : 100},
+            { Pname : 'Orange', Price : 200},
+            { Pname : 'Grape', Price : 300}
+        ]
+
+        console.log(products[0][Pname]);
+        console.log(products[0][Price]);
+
+        for (let i = 0; i < products.length; i++){
+            console.log(products[i].Pname + '\t' + products[i].Price)
+        }
+    </script>
+</body>
+</html>

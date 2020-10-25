@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript- Number 5 Math Number</title>
+</head>
+<body>
+    <script>
+        // isNaN ==> คาดหวังตัวเลขแต่ไม่ใช่เป็น NaN
+        console.log(isNaN(NaN));        // true
+        console.log(isNaN("str"));      // true
+        console.log(isNaN(123));        // false
+        console.log(isNaN());           // true
+
+        // isFinite เป็นจริงเมื่อไม่ใช่ Infinity หรือ NaN
+        console.log(isFinite("15"));        // true
+        console.log(isFinite(1e308));       // false
+        console.log(isFinite(1e309));       // false
+        console.log(isFinite("str"));       // false
+        console.log(isFinite());            // false
+        console.log(isFinite(Infinity));    // false
+        console.log(isFinite(1/0));         // false
+    </script>
+</body>
+</html>

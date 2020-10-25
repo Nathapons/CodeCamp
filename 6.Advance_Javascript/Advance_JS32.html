@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 6 sort 1</title>
+</head>
+<body>
+    <script>
+        // Sort ใช้สำหรับเรียงลำดับ Element เรียงตามพจนานุกรม ถ้าไม่กำหนดตามที่เราต้องการ
+        let arr = [1, 2, 15];
+        console.log(arr.sort());    // ==> 1, 15, 2
+
+        // sort compare function ==> sort(ชื่อ function)
+        function compare(a, b) {
+            if (a > b) return 1;
+            if (a == b) return 0;
+            if (a < b) return -1;
+        }
+
+        // ไม่ต้องใส่พารามิเตอร์ เพราะเป็น call back function
+        arr.sort(compare);
+        console.log(arr);
+
+        // Ternary if condition
+        function compare2(a, b){
+            return  (a>b)? 1 : (a<b)? -1 : 0
+        }
+        let arr2 = [1, 2, 15];
+        console.log(arr2.sort(compare2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 1.2 splice</title>
+</head>
+<body>
+    <script>
+        let fruits = ['Apple', 'Grape', 'Papaya', 'Mangoesteen'];
+
+        // Return สิ่งที่ลบออกไป
+        fruits.splice(1, 2, "Orange");
+        console.log(fruits);
+
+        // แทรก element ไม่ต้องลบข้อมูล ==> Return เป็น Array ว่าง
+        fruits.splice(2, 0, "Banana", "Papaya");
+        console.log(fruits);
+    </script>
+</body>
+</html>

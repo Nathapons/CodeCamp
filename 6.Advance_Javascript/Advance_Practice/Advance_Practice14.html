@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Calculator() {
+            this.read = function() {
+                this.number1 = Number(prompt('Enter value first number: '))
+                this.number2 = Number(prompt('Enter value second number: '))
+            }
+            this.sum = function() {
+                return this.number1 + this.number2
+            }
+            this.mul = function() { 
+                return this.number1 * this.number2
+            }
+        }
+
+        let cal =  new Calculator();
+        console.log(cal.read());
+        console.log(cal.sum());
+        console.log(cal.mul());
+    </script>
+
+</body>
+</html>

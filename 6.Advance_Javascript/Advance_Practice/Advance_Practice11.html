@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Methods ของ Object และ this keyword Excercise02</title>
+</head>
+<body>
+    <script>
+        function makeUser() {
+            // this จะเป็น undefined เพราะมันไม่รู้ว่า object หน้าคือใคร?
+            return {
+                name: "John",
+                ref: this
+            };
+        };
+
+        let user = makeUser();
+
+        console.log( user.ref.name ); // What's the result?
+
+        console.log(user);
+    </script>
+</body>
+</html>

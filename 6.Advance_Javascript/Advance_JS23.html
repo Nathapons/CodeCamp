@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 8 compare</title>
+</head>
+<body>
+    <script>
+        console.log(String.fromCharCode('0x0e01'));
+        console.log(String.fromCharCode('0x0e02'));
+
+        console.log('ก'.charCodeAt().toString(16));
+
+        // ค้นหาคำใน string หลัก
+        let str = 'กรุงเทพมหานคร';
+        // 1. includes
+        console.log(str.includes('เทพ'));
+        console.log(str.includes('เท่'));
+        console.log(str.includes('เทพ', 5));
+        // 2. startsWith
+        console.log(str.startsWith('กรุง'));
+        console.log(str.startsWith('เทพ'));
+        // 3. endsWith
+        console.log(str.endsWith('นคร'));
+        console.log(str.endsWith('ด'));
+
+        // Replace แทนคำลงในข้อความ
+        let newStr = str.replace('นคร', 'เมืองฟ้า');
+        console.log(newStr);
+        let newStr2 = str.replace('ร', 'x');
+        console.log(newStr2);
+
+        // ReplaceAll
+        let newStr3 = str.replaceAll('ร', 'x');
+        console.log(newStr3);
+
+        let str2 = 'string'
+        console.log(str2.cap)
+    </script>
+</body>
+</html>

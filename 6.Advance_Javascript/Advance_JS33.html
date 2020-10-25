@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 7 sort 2</title>
+</head>
+<body>
+    <script>
+        let num = [ 5, 7, -4, 2, 9, -8, 10, 8];
+        function ascending(a, b){
+            return  ( a > b )? 1 : ( a < b )? -1 : 0
+        }
+        console.log(num.sort(ascending));
+
+        // โจทย์ก็คือเรียงตัวเลขโดยไม่สนใจเครื่องหมาย +, -
+        function compareOnlyValue(a, b) {
+            return  ( Math.abs(a) > Math.abs(b) )? 1 : ( Math.abs(a) < Math.abs(b) )? -1 : 0
+        }
+        console.log(num.sort(compareOnlyValue));
+
+        // ฟังก์ชั่นเรียงจากมากไปน้อย
+        function decending(a, b){
+            return  ( a > b )? -1 : ( a < b )? 1 : 0
+        }
+        console.log(num.sort(decending));
+
+        // Sort with arrow function
+        console.log(num.sort((a, b) => ( a > b )? 1 : ( a < b )? -1 : 0));
+    </script>
+</body>
+</html>

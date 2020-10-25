@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 1.1</title>
+</head>
+<body>
+    <script>
+        let fruits = ['Apple', 'Grape', 'Papaya', 'Mangoesteen'];
+
+        fruits.push("Apple")
+        console.log(fruits);
+
+        let m = [1, 2, 3].push(4);
+        console.log(m);
+
+        // Splice ทำหน้าที่ในการลบข้อมูล
+        let arr = ['I', 'study', 'Javascript'];
+        arr.splice(1, 1)    // เริ่มลบตำแหน่งที่ 1 ลบจำนวน 1 ตัว
+        console.log(arr)
+
+        let fruits2 = ['Apple', 'Grape', 'Papaya', 'Mangoesteen'];
+        fruits2.splice(2, 0);
+        console.log(fruits2);
+    </script>
+</body>
+</html>

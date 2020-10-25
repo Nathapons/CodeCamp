@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Map 3 forEach</title>
+</head>
+<body>
+    <script>
+        let m = new Map( [
+            [ 1, 'one' ],
+            [ 2, 'two' ],
+            [ 3, 'three' ],
+            [ 4, 'four' ],
+            [ 5, 'five' ]
+        ] )
+
+        // Function
+        m.forEach( function (v, k) {
+            console.log(`${v} // ${k}`)
+        } );
+
+        // Arrow function
+        m.forEach( (v, k) => {
+            console.log(`${v} // ${k}`)
+        } );
+
+        // เปลี่ยนค่าใน Map
+        m.forEach( (v, k) => {
+            if (k === 3) m.set(k, "Third")
+            console.log(`${v} // ${k}`)
+        } );
+        console.log(m);
+    </script>
+</body>
+</html>

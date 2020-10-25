@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 4 filter</title>
+</head>
+<body>
+    <script>
+        // Example1
+        // filter คล้าย find แต่จะแสดงไปเรื่อยๆ เมื่อเงื่อนไขเป็นจริง
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"}
+        ]
+
+        let someUser = users.filter( item => (item.id >= 2) );
+        console.log(someUser);
+
+        // Example2
+        let products = [
+            {pname : 'Apple', price : 100},
+            {pname : 'Orange', price : 200},
+            {pname : 'Grape', price : 300}
+        ]
+
+        // Arrow function with filter
+        let product = products.filter( x => (x.price > 100) );
+        console.log(product);
+
+        // Function with filter
+        product = products.filter( function(item) {
+            return item.price > 100
+        })
+        console.log(product);
+    </script>
+</body>
+</html>

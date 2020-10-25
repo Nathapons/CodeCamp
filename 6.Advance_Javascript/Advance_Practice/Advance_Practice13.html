@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Methods ของ Object และ this keyword Excercise04 & 05</title>
+</head>
+<body>
+    <script>
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+            },
+            down() {
+                this.step--;
+            },
+            showStep: function() { // shows the current step
+                alert( this.step );
+            }
+        };
+        // 6.6 ข้อ4
+        ladder.up();
+        ladder.up();
+        ladder.down();
+        ladder.showStep();
+
+        let ladder2 = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep: function() { // shows the current step
+                console.log( this.step );
+            }
+        }
+        // 6.6 ข้อ5 ไม่ได้เพราะ up และ down ไม่ return
+        ladder2.up().up().down().showStep(); 
+    </script>
+</body>
+</html>

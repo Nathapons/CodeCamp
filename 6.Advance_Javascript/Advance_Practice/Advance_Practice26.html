@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method - Array02</title>
+</head>
+<body>
+    <script>
+        /* ข้อที่ 2.1 array1 = [1, 2, 30, 400] 
+        array2 [30, 400] // filter เลขที่มากกว่า 10 */
+        let array1 = [1, 2, 30, 400];
+        let newArray1 = array1.filter( num => num > 10);
+        console.log(newArray1);
+
+        /* ข้อที่ 2.2 array1 = [1, 2, 3, 4]
+        array2 [1, 3] // filter เลขคี่*/
+        let array2 = [1, 2, 3, 4]
+        let newArray2 = array2.filter( num => (num%2 === 1) );
+        console.log(newArray2);
+
+        /* ข้อที่ 2.3 array1 = [1, "1", 2, {}] 
+        array2 [1, 2] // filter Number*/
+        let array3 = [1, "1", 2, {}];
+        let newArray3 = array3.filter( item => ( typeof(item) == "number" ) );
+        console.log(newArray3);
+
+        /* ข้อที่ 2.4 array1 = ["apple", "banana", "orange", "pineapple", "watermeon"]
+        array2 ["pineapple", "watermeon"] */
+        let array4 = ["apple", "banana", "orange", "pineapple", "watermeon"];
+        let newArray4 = array4.filter( item => ( item.length > 6 ) );
+        console.log(newArray4);
+
+        /* ข้อที่ 2.5
+        array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ]
+        array2 [
+            { name: "apple", age: 14 },
+            { name: "pineapple", age: 16 },
+        ] // filter age < 18
+        */
+        let array5 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ]
+        let newArray5 = array5.filter( obj => (obj.age > 18) );
+        console.log(newArray5);
+
+        /* ข้อที่ 2.6
+        array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ]
+        array2 [    
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ] // filter ไม่เอาคนที่อายุ 32
+        */
+        let array6 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ]
+        let newArray6 = array6.filter( obj => (obj.age !== 32) );
+        console.log(newArray6);
+        
+        /* ข้อที่ 2.7
+        array1 = [1, -3, 2, 8, -4, 5]
+        array2 [1, 2, 8, 5] // filter เลขบวก
+        */
+        let array7 = [1, -3, 2, 8, -4, 5];
+        let newArray7 = array7.filter( num => (num > 0) );
+        console.log(newArray7);
+
+        /*ข้อที่ 2.8
+        array1 = [1,3,4,5,6,7,8]
+        array2 [3, 6] // filter เลขหาร 3 ลงตัว
+        */
+        let array8 = [1, 3, 4, 5, 6, 7, 8];
+        let newArray8 = array8.filter( num => (num % 3 === 0) );
+        console.log(newArray8);
+
+        /* ข้อที่ 2.9
+        array1 = ["peach", 1, -3, "2", {}, []]
+        array2 ["peach", "2"] // filter string
+        */
+        let array9 = ["peach", 1, -3, "2", {}, []]
+        let newArray9 = array9.filter( item => ( typeof(item) == "string" ) );
+        console.log(newArray9);
+
+        /* ข้อที่ 2.10
+        array1 = ["APPLE", "appLE", "PEACH", "PEach"]
+        array2 = ["APPLE", "PEACH"] // filter คำที่เป็นอักษรใหญ่ทุกตัว
+        */
+        let array10 = ["APPLE", "appLE", "PEACH", "PEach"]
+        let newArray10 = array10.filter( item => ( item == item.toLocaleUpperCase() ) );
+        console.log(newArray10);
+
+        /* ข้อที่ 2.11
+        array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ]
+        array2 [
+        { name: "banana", birth: "1990-10-10" },
+            { name: "peach", birth: "2002-10-13" },
+        ] // filter คนเกิดเดือน 10 */
+        let array11 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ];
+        let newArray11 = array11.filter( obj => {
+            let birthDay = new Date(obj.birth);
+            // + 1  เพราะวันที่มีเดือน = 10 มันคือค่าเท่ากับ 9? 
+            return (birthDay.getMonth() + 1) == 10;
+        } );
+        console.log(newArray11);
+
+        /* ข้อที่ 2.12
+        array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ]
+        array2 [
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+        ] // filter คนเกิดก่อนปี 2000
+        */
+        let array12 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ]
+        let newArray12 = array12.filter( function(item){
+            let birthDay = new Date(item.birth);
+            return birthDay.getFullYear() < 2000
+        } );
+        console.log(newArray12);
+    </script>
+</body>
+</html>

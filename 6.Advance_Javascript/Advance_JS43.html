@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Set 2</title>
+</head>
+<body>
+    <script>
+        let set4 = new Set("Hello World!!!");
+        console.log(set4);
+
+        // Copy By Reference set5 set4 คือตัวเดียวกัน
+        let set5 = set4
+        console.log(set5);
+
+        set5.delete("H");
+        console.log(set5);
+        console.log(set4);
+
+        // Copy data โดยไม่กระทบ set อีกตัว
+        set5 = new Set(set4);
+        set5.delete("e");
+        console.log(set5);
+        console.log(set4);
+    </script>
+</body>
+</html>

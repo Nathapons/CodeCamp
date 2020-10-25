@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Iterable</title>
+</head>
+<body>
+    <script>
+        /* Iterable คือ มันสามารถใช้ใน for...of ได้หรือป่าว?
+        ความสามารถเข้าถึงรายตัวได้ */
+
+        // Array เป็น iterable
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        for (let num of arr)
+            console.log(num)
+
+        // string เป็น iterable
+        let word = "HTML, CSS, Javascript"
+        let srr = []
+        for (let str of word) {
+            if (str === ",") str = "_"
+            srr.push(str)   
+        }
+        console.log(srr)
+
+        /* Object ไม่เป็น iterable
+        let users = { name : 'John', age : 24}
+        for (let x of users){
+            console.log(x)
+        }*/
+
+        // วิธีเช็ค Iterable
+        // prototype ==> จะมีคำสั่งที่ใช้งานกับ Array ==> ดูที่หัวข้อSymbol.iterator
+        console.dir(Array);
+        console.dir(Map);
+        console.dir(Set);
+        console.dir(Object);
+        console.dir(Uint8Array);
+
+        let nu = new Uint8Array(10).fill(0)
+        console.log(nu);
+        for (let x of nu){
+            console.log(x);
+        }
+    </script>
+</body>
+</html>

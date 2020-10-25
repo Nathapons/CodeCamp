@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Methods ของ Object และ this keyword</title>
+</head>
+<body>
+    <script>
+        // Method ของ Object
+        // method คือ ชื่อเรียกฟังก์ชั่นของ Object
+        // let user = {
+        //     name: 'Sonter',
+        //     callName: function(){
+        //         console.log(this.name)
+        //     }
+        // }
+        // console.log(user.callName)
+
+        // // วิธีการเรียกใช้ <ชื่อของ Object>.<ชื่อ Properties> = <function>
+        // function sayHello(){
+        //     console.log('Hello')
+        // }
+        // let user1 = {
+        //     name: 'Nathapon',
+        //     age: 25
+        // }
+        // user1.sayHi = sayHello
+        // console.log(user1)
+
+        // // Method แบบ Short hand
+        // function sayHi(){
+        //     console.log('Hi')
+        // }
+        // let user2 = {
+        //     name: 'ax',
+        //     sayHi
+        //     /* sayHi จะเหมือนกันเลย
+        //     sayHi: function sayHi(){
+        //         console.log('Hi')
+        //     }
+        //     */
+        // }
+        // console.log(user2)
+        // user3 = {
+        //     sayHi() { // เหมือนกับ "sayHi: function()"
+        //         alert("Hello");
+        //     }
+        // };
+        // console.log(user3)
+
+        // // “this” คีย์เวิร์ดใน Method
+        // let user4 = {
+        //     name: "John",
+        //     age: 30,
+        //     sayHi() {
+        //         alert(this.name);
+        //     }
+        // };
+
+        // console.log(user4.sayHi());
+
+        // let user = {name: 'Ax'}
+        // let admin = {name: 'Admin'}
+
+        // function sayHi1(){
+        //     console.log(this.name)
+        // }
+        // user.sayHi = sayHi1;
+        // admin.sayHi = sayHi1;
+        // console.log(user)
+        // console.log(admin)
+
+        let user = {
+            firstName: "Ilya",
+            sayHi() {
+                let arrow = () => alert(this.firstName);
+                arrow();
+            }
+        };
+
+        user.sayHi(); 
+    </script>
+</body>
+</html>

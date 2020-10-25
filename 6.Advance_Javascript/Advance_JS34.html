@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 8 2 sort 3</title>
+</head>
+<body>
+    <script>
+        // localeCompare
+        let thw = ['เด็ก', 'อก', 'เสมา', 'สนาม', 'สะดม'];
+        
+        /* localeCompare จะเป็นเรียงข้อมูลออกมาคล้ายกับ function ข้างล่างแต่เราไม่ต้องสร้าง function นี้ในสำหรับการเรียงพจนานุกรม
+        function localeCompare(a, b){
+            return  ( a > b )? 1 : ( a < b )? -1 : 0
+        }
+         */
+        console.log( thw.sort( (a, b) => a.localeCompare(b)) );
+    </script>
+</body>
+</html>

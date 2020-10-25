@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map และ Set - Practice 02</title>
+</head>
+<body>
+    <script>
+        /* ข้อที่ 2
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+        result => "nap,teachers,ear" or "PAN,cheaters,era"
+        */
+
+        // แบบที่ 1 ใช้วิธีการ Map : อยากได้ ==> "PAN,cheaters,era"
+        function aclean(arr) {
+            let arrMap = new Map()
+
+            for (let value of arr) {
+                // แปลงเป็นตัวเล็ก ==> แยกตัวอักษร ==> เรียงตัวอักษร ==> เชื่อมคำ
+                let key = value.toLowerCase().split('').sort().join('');
+
+                // ทำการเพิ่ม key, value ถ้า value มันซ้ำ ก็จะโดนทับไปเลย
+                arrMap.set(key, value);
+            }
+            return Array.from(arrMap.values());
+        }
+
+        // แบบที่ 2 ใช้วิธีการ Object: อยากได้ ==> "teachers", "ear", "nap"
+        function aclean2(arr){
+            let arrObj = new Object()
+
+            for (let i = (arr.length - 1) ; i >= 0; i--){
+                let key = String(arr[i]).toLowerCase().split('').sort().join('');
+                arrObj[key] = String(arr[i])
+            }
+            
+            return Object.values(arrObj)
+        }
+
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+        
+        console.log(aclean(arr));
+        console.log(aclean2(arr));
+    </script>
+</body>
+</html>

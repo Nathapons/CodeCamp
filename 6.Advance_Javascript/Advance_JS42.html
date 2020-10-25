@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Set 1</title>
+</head>
+<body>
+    <script>
+        /* Set เป็น Collection เก็บเฉพาะ values ไม่มี key และ ลำดับ
+         ถ้าเพิ่มค่าที่ซ้ำไป ค่านั้นจะไม่ถูกเพิ่ม */
+         let s = new Set( [1, 2, 3, 4, 5, "A"]);
+
+        // Add ถ้าแอดค่าซ้ำ ค่านั้นจะไม่ถูกเพิ่ม
+        s.add("B")          // Add to set
+        s.add("B")          // Value duplicate
+        s.add("B")          // Value duplicate
+        console.log(s);
+
+        // For each
+        s.forEach( v => console.log(v) );
+
+        // Delete
+        s.delete('A');
+        console.log(s);
+        
+        // Use cast ต้องการกำจัดค่าซ้ำใน set
+        let arr = [1, 2, 2, 3, 3, 4, 4, 5, 6, 6, 7, 7];
+        let newS = new Set(arr);
+        console.log(newS);
+
+        // แปลง Set ==> Array : Array.from
+        let ars = Array.from(newS);
+        console.log(ars);
+
+        for (let v of newS)
+            console.log(v)
+
+        let set1 = new Set( ['ABC', 'DEF', 'GHI'] );
+        for (let v of set1)
+            console.log(v.toLowerCase())
+
+        // v1, v2 ใน forEach สำหรับ set คือ ค่าเดียวกัน
+        set1.forEach( function(v1, v2){
+            console.log(v1, v2)
+        } );
+
+        // Has
+        console.log(set1.has('ABC'));
+
+        // keys ถึงแม้จะเป็น key แต่ set จะมีแค่ value อย่างเดียว
+        for ( let k of set1.keys() )
+            console.log(k);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Number 1</title>
+</head>
+<body>
+    <script>
+        // 7.3e9 ===> 7.3 * (10^9) : e คือตัวเลข 0
+        console.log(7.3e9);
+        console.log(1e0);
+        // 1.23e-2 ===> 1.23 * (10^-2) : e คือตัวเลข 0
+        console.log(1.23e-2);
+
+        // เลขฐาน 16 ตัวใหญ่เล็กไม่มีผล
+        console.log(0xff);
+        console.log(0xFF);
+
+        // เลขฐาน 8
+        console.log(0b11111111);
+        console.log(0o377);
+
+        // toString ประเภทเลขฐาน default คือ 10
+        let num = 255;
+        console.log(num.toString(16));  // num เป็นเลขอะไรในเลขฐาน 16
+        console.log(num.toString(2));   // num เป็นเลขอะไรในเลขฐาน 2
+        console.log(num.toString());    // num เป็นเลขอะไรในเลขฐาน 10
+        console.log(num.toString(10));
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 4 charAt</title>
+</head>
+<body>
+    <script>
+        let s = ['C', 'o', 'd', 'e', ' ', 'c', 'a', 'm', 'p'];
+        // ดึงค่าที่ละตัว
+        console.log(s[3]);
+        console.log(s[8]);
+        console.log(s.length);
+
+        let a = '';
+        // ดึงค่าแบบวนลูบ
+        for (let i=0; i<s.length; i++){
+            console.log(s[i]);
+            // Concat string
+            a = a + s[i];
+        }
+        console.log(a);
+        // charAt เป็น function ไม่สามารถใช้กับ Array ได้
+        console.log(a.charAt(6));
+        console.log('560'.charAt(1));
+        // คืนค่าเป็น String เปล่า เมื่อ index เกินตำแหน่ง string
+        console.log('๋Javscript'.charAt(10));
+        // ไม่สามารถใช้ -index เพื่อ Revise ไม่ได้
+        console.log(`${ss} at -3 => ${ss[-3]}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Construtor function & New</title>
+</head>
+<body>
+    <script>
+        // Constructor คือฟังก์ชั่นที่ใช้สร้าง Object ขึ้นต้นด้วยตัวใหญ่เท่านั้น
+        console.log('Example1');
+
+        function User(name){
+            this.name = name;
+            this.isAdmin = false;
+        }
+        
+        /* คำสั่ง function จะคล้ายกับ ข้างล่าง
+        function User(name){
+            this = {}           สร้าง Object โดยอัตโนมัติ
+            
+            this.name = name;
+            this.isAdmin = false;
+
+            return this;        รีเทิร์นอัตโนมัติ
+        }
+        */
+        
+        let user = new User('Jack');
+
+        console.log(user.name);
+        console.log(user.isAdmin);
+        
+        function BigUser() {
+            this.name = "John";
+
+            return {name: "Godzilla"};
+        }
+
+        console.log('Example2');
+        console.log(new BigUser());
+        console.log(new BigUser().name);
+
+        function BiggestUser(name) {
+            this.name = name;
+
+            this.sayHi = function() {
+                console.log("My name is: " + this.name);
+            }
+        }
+
+        let john = new BiggestUser("Ax");
+        console.log('Example3');
+        console.log(john.sayHi());     
+    </script>
+</body>
+</html>

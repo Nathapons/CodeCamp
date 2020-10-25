@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Object entries 1</title>
+</head>
+<body>
+    <script>
+        // key , values, entries ใน Map
+        let m = new Map( [
+            [ 1, 'one' ],
+            [ 2, 'two' ],
+            [ 3, 'three' ],
+            [ 4, 'four' ],
+            [ 5, 'five'],
+        ] );
+
+        console.log(m.keys());
+
+        for (let k of m.keys())
+            console.log(k)
+
+        for (let v of m.values())
+            console.log(v)
+
+        for (let e of m.entries())
+            console.log(e)
+
+        // key , values, entries ใน Set
+        let set1 = new Set( ['ABC', 'DEF', 'GHI'] );
+
+        for (let k of set1.keys())
+            console.log(k)
+
+        for (let v of set1.values())
+            console.log(v)
+
+        for (let e of set1.entries())
+            console.log(e)
+
+        // key , values, entries ใน Array
+        let arr = [1, 2, 2, 3, 3, 4, 4, 5, 6, 6, 7, 7];
+        // เลข index เป็น key
+        for (let k of arr.keys())
+            console.log(k)
+
+        for (let v of arr.values())
+            console.log(v)
+
+        for (let e of arr.entries())
+            console.log(e)
+
+        // key , values, entries ใน Object
+        let user = {
+            name : 'John',
+            age : 24,
+            gender : 'male',
+            from : 'bkk'
+        }
+
+        for (let k of Object.keys(user))
+            console.log(k)
+
+        for (let v of Object.values(user))
+            console.log(v)
+
+        for (let e of Object.entries(user))
+            console.log(e)
+    </script>
+</body>
+</html>

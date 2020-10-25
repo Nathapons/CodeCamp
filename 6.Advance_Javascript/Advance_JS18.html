@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – String 5 For of</title>
+</head>
+<body>
+    <script>
+        // for of ทำการวนลูบ string
+        let ss = "Codecamp Thailand"
+        for (let char of ss) {
+            console.log(char);
+        }
+
+        let s = ['C', 'o', 'd', 'e', ' ', 'c', 'a', 'm', 'p'];
+        for (let char of s) {
+            console.log(char);
+        }
+        // for link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+        // for, for in, for of สนใจแค่นี้
+
+        let str = 'Codecamp Thailand';
+        // ข้อความในภาษาไม่สามารถแก้ไขได้
+        // str[2] = 'x';
+        // console.log(str);
+        //  Array สามารถแก้ไขได้
+        s[2] = 'x';
+        console.log(s);
+
+        // toLowerCase() ==> เปลี่ยนตัวใหญ่เป็นตัวเล็ก, toUpperCase() เปลี่ยนตัวเล็กเป็นตัวใหญ่
+        console.log(ss.toLowerCase());
+        console.log(ss.toUpperCase());
+    </script>
+</body>
+</html>

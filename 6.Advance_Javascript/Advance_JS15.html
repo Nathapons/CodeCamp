@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript- String 2 Unicode</title>
+</head>
+<body>
+    <script>
+        console.log(String.fromCharCode(74));
+        console.log(String.fromCharCode(0x4a));
+        console.log(String.fromCharCode(0x40));
+
+        // UTF-8 Link Unicode: https://unicode.org/charts/
+        console.log('\u0e01\u0e02\u0e03');
+        console.log('\u0e01' == 'ก');
+        console.log('\u0041');
+        console.log('\x41');
+        console.log('\u0041' === '\x41');
+        console.log('\u{1f4b8}');
+        console.log('\u263b');
+    </script>
+</body>
+</html>

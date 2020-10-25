@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Object Part 2</title>
+</head>
+<body>
+    <script>
+        // Properties value shorthands
+        // Example 1
+        let name = 'Ax'
+        let age = 25
+        let obj = {
+            name, 
+            age
+        };
+        console.log(obj)
+
+        // Example 2
+        let address = 'Thailand'
+        let phone = '1150'
+        let obj2 = {
+            address,
+            phone
+        }
+        console.log(obj2)
+
+        // Property names limitations
+        let obj3 = {
+            function: "2",
+            2: true
+        }
+        console.log(obj3)
+
+        // การทดสอบการมีอยู่ของค่า key
+        let user = {
+            name: 'John', 
+            age: 30,
+            address: 'Thailand',
+            skill: 10
+        }
+        console.log('age' in user)      // True
+        console.log('phone' in user)    // False
+
+        let users = {
+            name: 'Ax',
+            age: 19,
+            address: 'Thailand',
+            skill: 'Python'
+        }
+        for (let key in users) {
+            console.log(`key is ${key}, value is ${users[key]}`)
+        }
+        /*
+            ถ้า key เป็น string ของตัวเลขมันจะเรียงให้
+            ถ้า key เป็น string ที่ไม่ใช่ตัวเลขมันก็จะแบบเดิม
+        */
+        let codes = {
+            "+49": "Germany",
+            "+41": "Switzerland",
+            "+44": "Great Britain",
+            "+1": "USA"
+        };
+        for (let key in codes){
+            console.log(key)
+        }
+        /*
+            primitive VS object
+            ความแตกต่างระหว่าง primitive และ Object คือ
+            primitive จะ copied by value
+            object จะ copied by reference
+        */
+
+        // การเปรียบเทียบ Object
+        let a = {};
+        let b = {}; // b ไม่เกี่ยวข้องกับ a เพราะเก็บคนละ reference
+
+        alert( a == b ); // false
+
+    </script>
+</body>
+</html>

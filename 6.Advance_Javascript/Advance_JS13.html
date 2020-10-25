@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Number 7 random</title>
+</head>
+<body>
+    <script>
+        // 1. Math.random ==> 0 ถึง 1 เฉลี่ยค่าเป็น Uniform distribution
+        console.log("Random Basic between 0 and 1");
+        for (let i=1; i<=20; i++) {
+            // +1 คือเราต้องการ Random 0 - 10 แบบเอาหัวท้าย
+            console.log(Math.floor(Math.random()*100) + 1);
+        }
+        // Remark: Math.random() อย่าใช้มันเกี่ยวกับ Security นะ!!
+
+        // 2. ถ้าหากต้องการ Random Between
+        console.log("Random Between")
+
+        function getRndInteger(min, max){
+            return Math.floor(Math.random() * (max-min)) + min;
+        }
+
+        console.log(getRndInteger(20, 60));
+
+        // function getRndIntegerNeedMaxMin(min, max){
+        //     // Random แบบมีต้องการค่า min และ max ด้วย
+        //     return Math.floor((Math.random() * (max-min)) + 1) + min;
+        // }
+ 
+        // console.log(getRndIntegerNeedMaxMin(10, 20));
+        
+        // Min and Max
+        console.log(Math.max(3, 5, -10, 0, 1));     // 5
+        console.log(Math.min(1, 2, 5, 200));        // 1
+        console.log(Math.min(1, 2, 5, 200, "-1"));  // -1
+        console.log(Math.min(1, 2, 5, 200, "a"));   // NaN
+
+        // Math.pow
+        console.log(Math.pow(3, 10));
+        console.log(Math.pow(-3, 0.5));         // NaN
+    </script>
+</body>
+</html>

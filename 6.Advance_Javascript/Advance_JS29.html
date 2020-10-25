@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript – Array method 3 find</title>
+</head>
+<body>
+    <script>
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"}
+        ]
+
+        /* Example1
+        1. ค้นหา id
+        With full function */
+        let user = users.find( function(x) {
+            return (x.id === 3)
+        })
+        console.log(user.name);
+
+        // With arrow function ให้ลบคำว่า function ออก แล้วใส่ => หลังตัวแปร
+        user = users.find( x => {
+            return (x.id === 3)
+        })
+        console.log(user.name);
+
+        // arrow function ละปีกกาต้องไม่ต้องใส่ return
+        user = users.find( x => (x.id === 3))
+        console.log(user.name);
+
+        // 2. ค้นหา name
+        user = users.find( function(x) {
+            return (x.name === "Pete")
+        })
+        console.log(user);
+
+        // Example 2
+        let products = [
+            {pname : 'Apple', price : 100},
+            {pname : 'Orange', price : 200},
+            {pname : 'Grape', price : 300}
+        ]
+
+        // find ==> Return Value
+        let product = products.find( item => (item.price === 100) );
+        console.log(product);
+
+        // findIndex ==> Return Index
+        product = products.findIndex( item => (item.price === 200) );
+        console.log(product);
+    </script>
+</body>
+</html>
