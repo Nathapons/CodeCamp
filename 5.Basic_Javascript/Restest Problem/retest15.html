@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest15</title>
+</head>
+<body>
+    <script>
+        reversedNum = (num) => {
+            let valueReverse = parseFloat(num.toString().split('').reverse().join(''))
+
+            if (String(num)[0] == "-"){
+                valueReverse = "-" + valueReverse
+            }
+            
+            return valueReverse
+        }
+        console.log( reversedNum(-53) );
+    </script>
+</body>
+</html>

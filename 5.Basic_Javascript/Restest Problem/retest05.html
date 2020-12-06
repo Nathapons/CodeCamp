@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest05</title>
+</head>
+<body>
+    <script>
+        let answer = 0;
+        let startNumber = 1;
+        let calTime = 1;
+
+        while (startNumber <= 18954) {
+            let nextNumber = startNumber + 1;
+
+            if (calTime % 2 == 0) {
+                answer = nextNumber + startNumber;
+            }else{
+                answer = nextNumber - startNumber;
+            }
+
+            startNumber += 1;
+            calTime += 1;
+        }
+
+        alert( answer );
+    </script>
+</body>
+</html>

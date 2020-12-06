@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest08</title>
+</head>
+<body>
+    <script>
+        let startNumber = 1;
+        let sumProduct = 0;
+
+        while (startNumber <= 155) {
+            let nextNumber = startNumber + 2;
+            let nextToNumber = startNumber + 4;
+
+            sumProduct += (startNumber * nextNumber * nextToNumber);
+            
+            // Loop command
+            startNumber += 2;
+        }
+
+        alert( sumProduct );
+    </script>
+</body>
+</html>

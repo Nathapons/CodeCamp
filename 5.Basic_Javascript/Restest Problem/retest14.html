@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest12</title>
+</head>
+<body>
+    <script>
+        let hasInputNumber = true;
+        let avg = 0;
+        let totalInput = 0
+        let sum = 0;
+
+        while(hasInputNumber){
+            let inputNumber = prompt("Input Number");
+
+            if (inputNumber !== null) {
+                sum += Number(inputNumber)
+                totalInput += 1
+            }else{
+                hasInputNumber =  false;
+            }
+        }
+
+        if (totalInput == 0){
+            alert( "คุณยังไม่กรอกตัวเลขลงไป ")
+        }else[
+            alert( `ค่าเฉลี่ยของคุณ คือ ${ sum / totalInput }` )
+        ]
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest01</title>
+</head>
+<body>
+    <script>
+        function miniDriving() {
+            let a = +prompt("Enter a value");
+            let b = +prompt("Enter b value");
+            let modRemain = a % b;
+
+            if (!modRemain) {
+                alert(`${ a / b }/1`)
+            }else{
+                alert(`${a}/${b}`)
+            }
+        }
+        
+        miniDriving()
+    </script>
+</body>
+</html>

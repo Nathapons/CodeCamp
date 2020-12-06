@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest04</title>
+</head>
+<body>
+    <script>
+        fibonacci = () => {
+            let fibonicAns = 0;
+            let fibonicNext = 1;
+            let fibonicPrev;
+            let timeForSum = +prompt("Enter for fibonacci");
+
+            while (timeForSum > 1) {
+                let fibonicPrev = fibonicNext;
+                fibonicNext = fibonicNext + fibonicAns;
+                fibonicAns = fibonicPrev;
+                timeForSum --;
+            }
+
+            return fibonicAns;
+        }
+
+        alert(fibonacci());
+    </script>
+</body>
+</html>

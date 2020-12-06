@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Retest12</title>
+</head>
+<body>
+    <script>
+        let numberList = [];
+        let hasInputNumber = true;
+
+        while(hasInputNumber){
+            let inputNumber = prompt("Input Number");
+
+            if (inputNumber !== null) {
+                console.log(inputNumber)
+                numberList.push( Number(inputNumber) )
+            }else{
+                hasInputNumber =  false;
+            }
+
+            
+        }
+
+        let sortList = numberList.sort( (a,b) => a > b? 1 : -1)
+        let maxIndex = numberList.length - 1;
+        alert( `Minimum Number is ${sortList[0]}. Maxmum Number is ${sortList[maxIndex]}` )
+    </script>
+</body>
+</html>
